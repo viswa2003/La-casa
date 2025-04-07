@@ -1,0 +1,19 @@
+
+.error-container {
+    text-align: center;
+    margin-top: 20px;
+    background-color: #222222;
+    padding: 50px;
+  }
+  
+  .error-heading {
+    font-size: 48px;
+    margin-top: 5px;
+    color: rgb(238, 255, 0);
+  }
+  
+  .error-image {
+    width: 600px;
+    height: 500px;
+  }
+  

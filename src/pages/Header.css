@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+.menu-toggle {
+  position: absolute;
+  top: 100px;
+  left: 60px;
+  width: 80px;
+  height: 80px;
+  background-color: #dd7d10;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  font-family: 'Poppins', sans-serif;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 4px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu-toggle.open {
+  background-color: transparent;
+  transform: translateX(250px);
+}
+
+.menu-toggle.open span:first-child {
+  transform: rotate(45deg) translate(2px, 2px);
+}
+
+.menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.open span:last-child {
+  transform: rotate(-45deg) translate(2px, -2px);
+}
+
+.sliding-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100vh;
+  background-color: #b68427;
+  transform: translateX(-100%);
+  transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  z-index: 99;
+  font-family: 'Poppins', sans-serif;
+}
+
+.sliding-menu.open {
+  transform: translateX(0);
+}
+
+.menu-items {
+  list-style: none;
+  font-size: 30px;
+  padding: 20px;
+  margin: 0;
+}
+
+.menu-items li {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.menu-items li:hover {
+  color: #ff9800;
+}
